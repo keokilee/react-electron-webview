@@ -1,0 +1,24 @@
+{
+  "name": "react-electron-webview",
+  "version": "1.0.0",
+  "description": "React component for the <webview> element in Electron.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keokilee/react-electron-webview.git"
+  },
+  "keywords": [
+    "react",
+    "electron",
+    "webview"
+  ],
+  "author": "George Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keokilee/react-electron-webview/issues"
+  },
+  "homepage": "https://github.com/keokilee/react-electron-webview#readme"
+}
