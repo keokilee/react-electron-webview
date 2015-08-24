@@ -1,4 +1,3 @@
-/* @flow */
 import React from 'react';
 import camelCase from 'camelCase';
 
@@ -42,23 +41,10 @@ export default class WebView extends React.Component {
   }
 
   render() {
-    const props = this._processProps();
     return (<webview {...props}></webview>);
   }
 
   // Private methods
-  _processProps() {
-    const props = this.props;
-    // Update boolean props.
-    Object.keys(WebView.propTypes)
-          .filter(prop => WebView.propTypes[prop] === React.PropTypes.boolean)
-          .forEach(prop => {
-            props[prop] = this.props[prop] ? 'on' : '';
-          });
-
-    return props;
-  }
-
   _bindEvents(node) {
     EVENTS.forEach(event => node.addEventListener(event, this.props[camelCase(event)]));
   }
