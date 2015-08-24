@@ -41,7 +41,7 @@ export default class WebView extends React.Component {
   }
 
   render() {
-    return (<webview {...props}></webview>);
+    return (<webview {...this.props}></webview>);
   }
 
   // Private methods
@@ -61,9 +61,10 @@ WebView.propTypes = {
   disablewebsecurity: React.PropTypes.bool,
   httpreferrer: React.PropTypes.string,
   nodeintegration: React.PropTypes.bool,
-  pageTitleSet: React.PropTypes.func,
   plugins: React.PropTypes.bool,
   preload: React.PropTypes.string,
   src: React.PropTypes.string,
   useragent: React.PropTypes.string
 };
+
+EVENTS.reduce((propTypes, event) => propTypes[camelCase(event)] = React.PropTypes.func, WebView.propTypes);
