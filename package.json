@@ -4,7 +4,8 @@
   "description": "React component for the <webview> element in Electron.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel webview.js --out-file index.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "homepage": "https://github.com/keokilee/react-electron-webview#readme",
   "dependencies": {
     "camelcase": "^1.2.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21"
   }
 }
