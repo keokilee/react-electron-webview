@@ -1,5 +1,5 @@
 import React from 'react';
-import camelCase from 'camelCase';
+import camelCase from 'camelcase';
 
 const EVENTS = [
   'load-commit',
