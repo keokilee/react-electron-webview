@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/keokilee/react-electron-webview#readme",
   "dependencies": {
-    "camelcase": "^1.2.1"
+    "camelcase": "^2.0.1"
   },
   "devDependencies": {
     "babel": "^6.3.26",
