@@ -4,7 +4,7 @@
   "description": "React component for the <webview> element in Electron.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
     "prepublish": "babel webview.js --out-file index.js"
   },
   "repository": {
@@ -26,6 +26,23 @@
     "camelcase": "^1.2.1"
   },
   "devDependencies": {
-    "babel": "^5.8.21"
+    "babel": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "electron-prebuilt": "^0.36.2",
+    "expect": "^1.13.4",
+    "karma": "^0.13.16",
+    "karma-electron-launcher": "^0.1.0",
+    "karma-mocha": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-spec-reporter": "0.0.23",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.4",
+    "react": "^0.14.5",
+    "react-addons-test-utils": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "webpack": "^1.12.9"
   }
 }

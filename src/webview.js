@@ -1,4 +1,5 @@
 import React from 'react';
+import { findDOMNode } from 'react-dom';
 import camelCase from 'camelcase';
 
 const EVENTS = [
@@ -33,7 +34,7 @@ export default class WebView extends React.Component {
 
   componentDidMount() {
     // Set up listeners.
-    const node = React.findDOMNode(this);
+    const node = findDOMNode(this);
 
     this._bindEvents(node);
     this._assignMethods(node);
@@ -50,9 +51,11 @@ export default class WebView extends React.Component {
   }
 
   _assignMethods(node) {
-    Object.getOwnPropertyNames(node)
-          .filter(prop => typeof prop === 'function')
-          .forEach(method => this[method] = node[method]);
+    node.addEventListener('dom-ready', () => {
+      Object.getOwnPropertyNames(node)
+            .filter(prop => typeof prop === 'function')
+            .forEach(method => this[method] = node[method]);
+    });
   }
 }
 
