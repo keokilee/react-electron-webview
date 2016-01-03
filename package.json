@@ -1,15 +1,15 @@
 {
   "name": "react-electron-webview",
-  "version": "1.0.5",
   "description": "React component for the <webview> element in Electron.",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
-    "prepublish": "babel src/webview.js --out-file index.js"
+    "prepublish": "babel src/webview.js --out-file index.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keokilee/react-electron-webview.git"
+    "url": "https://github.com/keokilee/react-electron-webview.git"
   },
   "keywords": [
     "react",
@@ -44,6 +44,7 @@
     "react": "^0.14.5",
     "react-addons-test-utils": "^0.14.5",
     "react-dom": "^0.14.5",
-    "webpack": "^1.12.9"
+    "webpack": "^1.12.9",
+    "semantic-release": "^4.3.5"
   }
 }
