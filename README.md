@@ -1,7 +1,7 @@
 React Electron webview
 =============================
 
-[![Travis](https://img.shields.io/travis/keokilee/react-electron-webview.svg)]()
+[![Build Status](https://travis-ci.org/keokilee/react-electron-webview.svg?branch=master)](https://travis-ci.org/keokilee/react-electron-webview)
 [![npm](https://img.shields.io/npm/v/react-electron-webview.svg)]()
 [![GitHub license](https://img.shields.io/github/license/keokilee/react-electron-webview.svg)]()
 
