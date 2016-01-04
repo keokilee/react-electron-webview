@@ -1,6 +1,6 @@
 const path = require('path');
 
-const BROWSER_DIR = path.join(process.cwd(), 'src');
+const SRC_DIR = path.join(process.cwd(), 'src');
 const TEST_DIR = path.join(process.cwd(), 'test');
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      include: BROWSER_DIR,
+      include: SRC_DIR,
       loader: 'babel'
     }, {
       test: /\.jsx?$/,

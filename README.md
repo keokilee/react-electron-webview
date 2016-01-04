@@ -8,4 +8,4 @@ React Electron webview
 [![David](https://img.shields.io/david/keokilee/react-electron-webview.svg)]()
 [![David](https://img.shields.io/david/dev/keokilee/react-electron-webview.svg)]()
 
-React component for the <webview> element in Electron.
+React component for the &lt;webview&gt; element in Electron.
