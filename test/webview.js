@@ -26,8 +26,8 @@ describe('webview', () => {
 
   describe('events', () => {
     it('responds to the load-commit event', () => {
-      const props = {loadCommit: () => true};
-      const spy = spyOn(props, 'loadCommit');
+      const props = {onLoadCommit: () => true};
+      const spy = spyOn(props, 'onLoadCommit');
       const webview = renderWebviewTag(props);
 
       const testEvent = new Event('load-commit');
@@ -36,8 +36,8 @@ describe('webview', () => {
     });
 
     it('responds to the dom-ready event', () => {
-      const props = {domReady: () => true};
-      const spy = spyOn(props, 'domReady');
+      const props = {onDomReady: () => true};
+      const spy = spyOn(props, 'onDomReady');
       const webview = renderWebviewTag(props);
 
       const testEvent = new Event('dom-ready');

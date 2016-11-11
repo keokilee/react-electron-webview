@@ -26,6 +26,10 @@ const EVENTS = [
   'destroyed'
 ];
 
+const HANDLERS = EVENTS.map(event => camelCase(`on-${event}`));
+
+const EVENTS_HANDLERS = EVENTS.map((event, i) => ({ event, handler: HANDLERS[i] }));
+
 export default class WebView extends React.Component {
   constructor(props) {
     super(props);
@@ -47,7 +51,9 @@ export default class WebView extends React.Component {
 
   // Private methods
   _bindEvents(node) {
-    EVENTS.forEach(event => node.addEventListener(event, this.props[camelCase(event)]));
+    for (const { event, handler } of EVENTS_HANDLERS) {
+      node.addEventListener(event, this.props[handler]);
+    }
   }
 
   _assignMethods(node) {
@@ -59,7 +65,7 @@ export default class WebView extends React.Component {
   }
 }
 
-WebView.propTypes = {
+const tagPropTypes = {
   autosize: React.PropTypes.bool,
   disablewebsecurity: React.PropTypes.bool,
   httpreferrer: React.PropTypes.string,
@@ -70,4 +76,9 @@ WebView.propTypes = {
   useragent: React.PropTypes.string
 };
 
-EVENTS.reduce((propTypes, event) => propTypes[camelCase(event)] = React.PropTypes.func, WebView.propTypes);
+const eventPropTypes = EVENTS_HANDLERS.reduce((propTypes, { event, handler }) => {
+  propTypes[handler] = React.PropTypes.func;
+  return propTypes;
+}, {});
+
+WebView.propTypes = Object.assign({}, tagPropTypes, eventPropTypes);
