@@ -30,6 +30,15 @@ const HANDLERS = EVENTS.map(event => camelCase(`on-${event}`));
 
 const EVENTS_HANDLERS = EVENTS.map((event, i) => ({ event, handler: HANDLERS[i] }));
 
+function filterKeys(object, filterFunc) {
+  return Object.keys(object)
+    .filter(filterFunc)
+    .reduce((filtered, key) => {
+      filtered[key] = object[key];
+      return filtered;
+    }, {});
+}
+
 export default class WebView extends React.Component {
   constructor(props) {
     super(props);
@@ -46,7 +55,8 @@ export default class WebView extends React.Component {
   }
 
   render() {
-    return (<webview {...this.props}></webview>);
+    const tagProps = filterKeys(this.props, propName => propName in tagPropTypes)
+    return (<webview {...tagProps}></webview>);
   }
 
   // Private methods
