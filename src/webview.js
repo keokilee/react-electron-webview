@@ -67,7 +67,13 @@ WebView.propTypes = {
   plugins: React.PropTypes.bool,
   preload: React.PropTypes.string,
   src: React.PropTypes.string,
-  useragent: React.PropTypes.string
+  useragent: React.PropTypes.string,
+  partition: React.PropTypes.string,
+  allowpopups: React.PropTypes.bool,
+  webpreferences: React.PropTypes.string,
+  blinkfeatures: React.PropTypes.string,
+  disableblinkfeatures: React.PropTypes.string,
+  guestinstance: React.PropTypes.string,
 };
 
 EVENTS.reduce((propTypes, event) => propTypes[camelCase(event)] = React.PropTypes.func, WebView.propTypes);
