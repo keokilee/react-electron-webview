@@ -51,5 +51,6 @@
     "react-dom": "^15.3.2",
     "semantic-release": "^4.3.5",
     "webpack": "^1.12.9"
-  }
+  },
+  "version": "2.0.0"
 }
