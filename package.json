@@ -7,6 +7,9 @@
     "prepublish": "babel src/webview.js --out-file index.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "files": [
+    "index.d.ts"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/keokilee/react-electron-webview.git"
@@ -26,6 +29,8 @@
     "camelcase": "^4.0.0"
   },
   "devDependencies": {
+    "@types/electron": "^1.4.26",
+    "@types/react": "^0.14.47",
     "babel": "^6.3.26",
     "babel-cli": "^6.3.17",
     "babel-loader": "^6.2.0",

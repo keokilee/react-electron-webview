@@ -83,7 +83,13 @@ const tagPropTypes = {
   plugins: React.PropTypes.bool,
   preload: React.PropTypes.string,
   src: React.PropTypes.string,
-  useragent: React.PropTypes.string
+  useragent: React.PropTypes.string,
+  partition: React.PropTypes.string,
+  allowpopups: React.PropTypes.bool,
+  webpreferences: React.PropTypes.string,
+  blinkfeatures: React.PropTypes.string,
+  disableblinkfeatures: React.PropTypes.string,
+  guestinstance: React.PropTypes.string,
 };
 
 const eventPropTypes = EVENTS_HANDLERS.reduce((propTypes, { event, handler }) => {
