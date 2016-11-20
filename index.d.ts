@@ -19,27 +19,27 @@ export interface WebViewProps extends React.HTMLProps<Electron.WebViewElement> {
   disableblinkfeatures?: string
   guestinstance?: string
   
-  loadCommit?: EventListener
-  didFinishLoad?: EventListener
-  didFailLoad?: EventListener
-  didFrameFinishLoad?: EventListener
-  didStartLoading?: EventListener
-  didStopLoading?: EventListener
-  didGetResponseDetails?: EventListener
-  didGetRedirectRequest?: EventListener
-  domReady?: EventListener
-  pageTitleSet?: EventListener
-  pageFaviconUpdated?: EventListener
-  enterHtmlFullScreen?: EventListener
-  leaveHtmlFullScreen?: EventListener
-  consoleMessage?: EventListener
-  newWindow?: EventListener
-  close?: EventListener
-  ipcMessage?: EventListener
-  crashed?: EventListener
-  gpuCrashed?: EventListener
-  pluginCrashed?: EventListener
-  destroyed?: EventListener
+  onLoadCommit?: EventListener
+  onDidFinishLoad?: EventListener
+  onDidFailLoad?: EventListener
+  onDidFrameFinishLoad?: EventListener
+  onDidStartLoading?: EventListener
+  onDidStopLoading?: EventListener
+  onDidGetResponseDetails?: EventListener
+  onDidGetRedirectRequest?: EventListener
+  onDomReady?: EventListener
+  onPageTitleSet?: EventListener
+  onPageFaviconUpdated?: EventListener
+  onEnterHtmlFullScreen?: EventListener
+  onLeaveHtmlFullScreen?: EventListener
+  onConsoleMessage?: EventListener
+  onNewWindow?: EventListener
+  onClose?: EventListener
+  onIpcMessage?: EventListener
+  onCrashed?: EventListener
+  onGpuCrashed?: EventListener
+  onPluginCrashed?: EventListener
+  onDestroyed?: EventListener
 }
 interface WebViewState {
   loaded: boolean
