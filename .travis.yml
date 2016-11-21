@@ -7,11 +7,9 @@ notifications:
   email: false
 node_js:
   - 'stable'
-  - '5.0'
-  - '4.1'
-  - '4.0'
+  - '4.6'
 before_install:
-  - npm i -g npm@^2.0.0
+  - npm i -g npm@^4.0.0
 before_script:
   - "export  DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
