@@ -25,6 +25,11 @@
     "url": "https://github.com/keokilee/react-electron-webview/issues"
   },
   "homepage": "https://github.com/keokilee/react-electron-webview#readme",
+  "peerDependencies": {
+    "electron-prebuilt": "^1.0.0",
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0|| ^15.0.0"
+  },
   "dependencies": {
     "camelcase": "^4.0.0"
   },
