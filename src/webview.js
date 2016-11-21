@@ -55,7 +55,7 @@ export default class WebView extends React.Component {
   }
 
   render() {
-    const tagProps = filterKeys(this.props, propName => propName in tagPropTypes)
+    const tagProps = filterKeys(this.props, propName => !(propName in eventPropTypes))
     return (<webview {...tagProps}></webview>);
   }
 
