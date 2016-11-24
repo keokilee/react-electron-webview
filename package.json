@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/keokilee/react-electron-webview#readme",
   "peerDependencies": {
-    "electron": "^1.0.0",
+    "electron": "^1.0",
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0|| ^15.0.0"
   },
@@ -52,7 +52,6 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "mocha": "^3.1.2",
-    "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
     "semantic-release": "^6.3.2",
