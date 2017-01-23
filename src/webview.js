@@ -12,18 +12,29 @@ const EVENTS = [
   'did-get-response-details',
   'did-get-redirect-request',
   'dom-ready',
-  'page-title-set',
+  'page-title-updated',
   'page-favicon-updated',
   'enter-html-full-screen',
   'leave-html-full-screen',
   'console-message',
+  'found-in-page',
   'new-window',
+  'will-navigate',
+  'did-navigate',
+  'did-navigate-in-page',
   'close',
   'ipc-message',
   'crashed',
   'gpu-crashed',
   'plugin-crashed',
-  'destroyed'
+  'destroyed',
+  'media-started-playing',
+  'media-paused',
+  'did-change-theme-color',
+  'update-target-url',
+  'devtools-opened',
+  'devtools-closed',
+  'devtools-focused'
 ];
 
 const HANDLERS = EVENTS.map(event => camelCase(`on-${event}`));
@@ -76,7 +87,7 @@ export default class WebView extends React.Component {
 }
 
 const tagPropTypes = {
-  autosize: React.PropTypes.bool,
+  autosize: React.PropTypes.string,
   disablewebsecurity: React.PropTypes.bool,
   httpreferrer: React.PropTypes.string,
   nodeintegration: React.PropTypes.bool,
@@ -90,6 +101,10 @@ const tagPropTypes = {
   blinkfeatures: React.PropTypes.string,
   disableblinkfeatures: React.PropTypes.string,
   guestinstance: React.PropTypes.string,
+  minwidth: React.PropTypes.string,
+  minheight: React.PropTypes.string,
+  maxwidth: React.PropTypes.string,
+  maxheight: React.PropTypes.string
 };
 
 const eventPropTypes = EVENTS_HANDLERS.reduce((propTypes, { event, handler }) => {
